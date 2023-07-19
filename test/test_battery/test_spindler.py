@@ -6,7 +6,7 @@ from battery.spindler_battery import SpindlerBattery
 
 class TestNubbin(unittest.TestCase):
     def test_needs_service(self):
-        last_service_date = date.fromisoformat("2020-01-01")
+        last_service_date = date.fromisoformat("2019-01-01")
         current_date = date.fromisoformat("2023-01-01")
         battery = SpindlerBattery(last_service_date, current_date)
         self.assertTrue(battery.needs_service())
